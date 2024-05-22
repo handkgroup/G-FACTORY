@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind-configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- tailwind-configuration-end -->
+
+    <!-- custom-css -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            
+        }
+        </style>
+    <!-- custom-css-end -->
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="flex px-20 py-6 shadow-lg justify-between">
+        <!-- left -->
+        <div class="flex ">
+            <img src="./assets/img/logo.png" alt="company-logo">
+
+            <div class="xl:bg-black xl:w-1 xl:h-6 hidden xl:block xl:ml-3"></div>
+            <!-- Member page -->
+            <h1 class="ml-3 text-base font-bold">会員ページ</h1>
+        </div>
+        <!-- left-end -->
+
+        <div class="flex gap-6">
+
+            <h1>マイページ</h1>
+            <img src="./assets/img/user-logo.png" alt="user-logo" class="w-7 h-7">
+            <h1>田中 リリカ</h1>
+        </div>
+    </nav>
+    <!-- navbar-end -->
+
+    <!-- form -->
+    <div class="flex flex-col py-14 xl:py-20 lg:px-80">
+        <div class="flex justify-center text-center">
+            <img src="./assets/img/company-logo-2.png" alt="company-logo" class="w-80">
+        </div>
+
+        <!-- form-content -->
+        <div class="shadow-lg py-8 lg:px-12">
+            <h1 class="text-center text-2xl font-bold">新規登録はこちらから</h1>
+            <h2 class="text-center text-xl mt-6">ご登録完了後、ご入力いただいたメールアドレスに、
+                ご登録の確認メールをお送りします。
+                (ご登録前にメールの受信設定のご確認をお願いします)</h2>
+
+            <!-- form -->
+            <form class="bg-white p-4 mx-auto md:max-w-4xl md:p-8">
+                <!-- two-column -->
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label>姓<span class="text-red-600">*</span></label>
+                        <input type="text" name="name" id="first_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black"
+                            placeholder=" 姓" required />
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label>名 <span class="text-red-600">*</span></label>
+                        <input type="text" name="name" id="second_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black"
+                            placeholder=" 名" required />
+                    </div>
+                </div>
+                <!-- two-column-end -->
+
+                <div class="relative z-0 w-full mb-5 group">
+                    <label class="text-left">メールアドレス<span class="text-red-600 text-left">*</span></label>
+                    <input type="email" name="Email" id="email"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black"
+                        placeholder=" Ex: admin@mail.com" required />
+                </div>
+
+                <!-- terms of conditions -->
+                <div class="flex items-center mt-5">
+                    <input id="link-checkbox" type="checkbox" value="" class="ms-2 text-sm" required>
+                    <label for="link-checkbox" class="ms-2 text-sm"><a href="#"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">個人情報の取扱い</a>
+                        に同意する</label>
+                </div>
+                <!-- terms-of-conditions-end -->
+
+                <div class="justify-center text-center mt-5">
+                    <button type="submit" class="text-white text-sm w-44 sm:w-auto px-5 py-2.5 text-center rounded-xl"
+                        style="background: #4E4E76">登録する</button>
+                </div>
+
+                <!-- already have an account -->
+                <div class="mt-5 text-center">
+                    <h1 class="text-sm xl:text-lg">すでに登録済みの方は <a href="./register.html"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">こちら</a> からログインしてください</h1>
+                </div>
+            </form>
+        </div>
+        <!-- form-content-end -->
+    </div>
+    <!-- form-end -->
+
+    <!-- footer -->
+    <div class="flex text-white justify-around p-4" style="background: #6C6C6C;">
+        <div class="flex gap-8">
+            <h1>会社情報</h1>
+            <h1>利用規約</h1>
+            <h1>特定商取引法に基づく表記</h1>
+            <h1>プライバシーポリシー</h1>
+            <h1>プライバシーポリシー</h1>
+        </div>
+
+        <div>
+            <h1>©️copy right GーFACTORY.inc</h1>
+        </div>
+    </div>
+    <!-- footer-end -->
+
+</body>
+
+</html>
