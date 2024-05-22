@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind-configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- tailwind-configuration-end -->
+
+    <!-- custom-css -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            
+        }
+        </style>
+    <!-- custom-css-end -->
+</head>
+
+<body>
+    
+    <!-- navbar -->
+    <div class="flex px-20 py-6 bg-gray-300 justify-between">
+        <!-- left -->
+        <div class="flex ">
+            <img src="./assets/img/logo.png" alt="company-logo">
+
+            <div class="xl:bg-black xl:w-1 xl:h-6 hidden xl:block xl:ml-3"></div>
+            <!-- Member page -->
+            <h1 class="ml-3 text-base font-bold">会員ページ</h1>
+        </div>
+        <!-- left-end -->
+
+        <div class="flex gap-6">
+
+            <h1>マイページ</h1>
+            <img src="./assets/img/user-logo.png" alt="user-logo" class="w-7 h-7">
+            <h1>田中 リリカ</h1>
+        </div>
+    </div>
+    <!-- navbar-end -->
+
+</body>
+
+</html>
