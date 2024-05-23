@@ -33,7 +33,7 @@
     <!-- custom-css-end -->
 </head>
 
-<body>
+<body class="min-h-screen flex flex-col">
 
     <!-- navbar -->
     <nav class="flex px-20 py-6 shadow-lg justify-between">
@@ -71,29 +71,44 @@
 
             <!-- form -->
             <form class="bg-white p-4 mx-auto md:max-w-4xl md:p-8">
+                <!-- two-column -->
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label>姓<span class="text-red-600">*</span></label>
+                        <input type="text" name="name" id="first_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black"
+                            placeholder=" 姓" required />
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label>名 <span class="text-red-600">*</span></label>
+                        <input type="text" name="name" id="second_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black"
+                            placeholder=" 名" required />
+                    </div>
+                </div>
+                <!-- two-column-end -->
+
                 <div class="relative z-0 w-full mb-5 group">
                     <label class="text-left">メールアドレス<span class="text-red-600 text-left">*</span></label>
                     <input type="email" name="Email" id="email"
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black"
-                        placeholder=" メールアドレス" required />
+                        placeholder=" Ex: admin@mail.com" required />
                 </div>
-                
-                <div class="relative z-0 w-full mb-5 group">
-                    <label class="text-left">パスワード<span class="text-red-600 text-left">*</span></label>
-                    <input type="password" name="Password" id="password"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black"
-                        placeholder=" パスワード" required />
+
+                <!-- terms of conditions -->
+                <div class="flex items-center mt-5">
+                    <input id="link-checkbox" type="checkbox" value="" class="ms-2 text-sm" required>
+                    <label for="link-checkbox" class="ms-2 text-sm"><a href="#"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">個人情報の取扱い</a>
+                        に同意する</label>
                 </div>
-                
+                <!-- terms-of-conditions-end -->
+
                 <div class="justify-center text-center mt-5">
                     <button type="submit" class="text-white text-sm w-44 sm:w-auto px-5 py-2.5 text-center rounded-xl"
                         style="background: #4E4E76">登録する</button>
                 </div>
-                
-                <div class="mt-5 text-center">
-                    <h1 class="text-sm xl:text-lg"><a href="">パスワードを忘れた方</a></h1>
-                    </div>
-                    
+
                 <!-- already have an account -->
                 <div class="mt-5 text-center">
                     <h1 class="text-sm xl:text-lg">すでに登録済みの方は <a href="./login.html"
@@ -106,7 +121,7 @@
     <!-- form-end -->
 
     <!-- footer -->
-    <div class="flex text-white justify-around p-4" style="background: #6C6C6C;">
+    <div class="flex text-white justify-around p-4 mt-auto" style="background: #6C6C6C;">
         <div class="flex gap-8">
             <h1>会社情報</h1>
             <h1>利用規約</h1>
